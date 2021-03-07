@@ -1,5 +1,6 @@
 import * as React from 'react';
-import Container from '../container';
+import HeaderImg from '../headerImg';
+import HeaderLogo from '../headerLogo';
 import './styles.css';
 
 export interface HeaderProps {
@@ -14,11 +15,14 @@ class Header extends React.Component<HeaderProps, HeaderState> {
     state = { }
     render() { 
         return (  
-            <Container>
-                <section className="header">
-
-                </section>
-            </Container>
+            <header className='header'>
+                <div className='container'>
+                    <section className="header-container">
+                        <HeaderImg/>
+                        <HeaderLogo/>
+                    </section>
+                </div>
+            </header>
         );
     }
 }

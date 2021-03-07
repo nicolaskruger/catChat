@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
+.p_logo, .p_hide{
+    font-family: 'Akaya Telivigala', cursive;
+    font-size: 20px;
+}
+.p_logo{
+    color: var(--color-04);
+}
+.p_hide{
+    color: var(--color-03);
+}

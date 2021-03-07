@@ -1,0 +1,23 @@
+
+.section__h_img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.header__img{
+    width: 30px;
+}
+.p_h_img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: miau 10s infinite;
+    height: 16px;
+    width: 40px;
+}
+@keyframes miau{
+    0% {font-size: 0px;}
+    90%{font-size: 0px;}
+    100% {font-size: 16px;}
+}

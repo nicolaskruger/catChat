@@ -1,4 +1,10 @@
 .header{
+    width: 100%;
+    background-color: var(--color-01);
+    height: var(--head_heigth);
+}
+.header-container{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }

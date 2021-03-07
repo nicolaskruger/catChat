@@ -1,13 +1,31 @@
+:root{
+  --color-01: rgb(4, 4, 39);
+  --color-02: rgb(21, 23, 39);
+  --color-03: rgb(34, 34, 34);
+  --color-04: whitesmoke;
+  --head_heigth: 60px;
+  --main_heigth: calc(100vh - var(--head_heigth));
+}
 body {
+  position: relative;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-03); 
+  background-image: url(https://cdn2.iconfinder.com/data/icons/art-and-crafting-set/128/iStar_Design_Art_LineIcons_Live-105-512.png);
+  background-size: 40px;
 }
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.color{
+  color: rgb(0, 0, 29);
+  color: rgb(8, 10, 26);
+  color: rgb(34, 34, 34);
 }
