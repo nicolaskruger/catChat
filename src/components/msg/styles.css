@@ -1,0 +1,13 @@
+.msg{
+    max-width: 60%;
+    min-width: 200px;
+    min-height: 50px;
+    border-radius: 10px;
+    background-color: var(--color-06);
+    display: flex;
+    display: table-cell;
+    justify-content: flex-end;
+    padding: 10px;
+    overflow: hidden;
+    word-wrap: break-word;
+}

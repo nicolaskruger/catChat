@@ -1,0 +1,31 @@
+:root{
+    --form__heigth: 30px;
+    --form__heigth__button: calc(1px + var(--form__heigth));
+}
+.form__msg{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    width: 100%;
+}
+.form__txt{
+    width: 79%;
+    height: var(--form__heigth);
+    resize: none;
+}
+.form__button{
+    cursor: pointer;
+    background-color: var(--color-06);
+    border:none;
+    width: 20%;
+    height: var(--form__heigth__button);
+    transition: 200ms;
+}
+.form__button:focus{
+    outline: none;
+    box-shadow: none;
+}
+.form__button:hover{
+    opacity: .9;
+}

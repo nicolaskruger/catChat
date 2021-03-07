@@ -1,4 +1,7 @@
 .main{
     background-color: var(--color-02);
     height: var(--main_heigth);
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 60px;
 }

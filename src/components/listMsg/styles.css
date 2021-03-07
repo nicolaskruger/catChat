@@ -1,0 +1,13 @@
+.msg__list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 20px;
+    padding-top: 5px;
+    overflow-y: scroll;
+}
+.msg__li{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
