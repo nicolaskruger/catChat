@@ -2,7 +2,9 @@ import * as React from 'react';
 import './styles.css'
 
 export interface FormProps {
-    createMsg:(msg:string)=>void
+    createMsg:(msg:string,resp?:string)=>void;
+    respMsg?:string;
+    closeTab:()=>void;
 }
  
 export interface FormState {
@@ -15,8 +17,10 @@ class Form extends React.Component<FormProps, FormState> {
     private send(event:React.FormEvent){
         event.preventDefault();
         event.stopPropagation();
-        if(this.msg)
-        this.props.createMsg(this.msg)
+        if(this.msg){
+            this.props.createMsg(this.msg, this.props.respMsg)
+            this.props.closeTab()
+        }
     }
     private getMsg(event:React.FormEvent<HTMLTextAreaElement>){
         this.msg = event.currentTarget.value;

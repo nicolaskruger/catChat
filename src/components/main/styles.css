@@ -11,6 +11,7 @@
 .main-reponse{
     grid-template-rows: 1fr auto 60px;
 }
+
 .change{
     position: fixed;
     top: 0;

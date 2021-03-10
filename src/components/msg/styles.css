@@ -24,3 +24,13 @@
 .msg:hover > .msg-img{
     display: inline;
 }
+.msg-div{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.msg-sect{
+    background-color: var(--color-05);
+    padding: 10px;
+    border-radius: 5px;    
+}

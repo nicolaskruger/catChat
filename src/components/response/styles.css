@@ -1,3 +1,20 @@
 .response-section{
-    
+    background-color: var(--color-05);
+    padding: 0 10px;
+    border: 10px solid var(--color-05);
+    border-radius: 5px 5px 0 0;
+    display: grid;
+    grid-template-columns: 95% 10px;
+    gap: 5px;
+    grid-template-rows: auto;
+}
+.response-p{
+    display: table-cell;
+    word-wrap: break-word;
+    width: 100%;
+}
+.responde-img{
+    cursor: pointer;
+    display:  flex;
+ 
 }

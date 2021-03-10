@@ -3,6 +3,7 @@ import './styles.css'
 import ListMsg from '../listMsg';
 import Form from '../form'
 import Response from '../response'
+import MsgInterface from '../../app/Msg';
 
 enum StateMain{
     default = 0,
@@ -13,10 +14,10 @@ export interface MainProps {
 }
  
 export interface MainState {
-    list:string[],
+    list:MsgInterface[],
     change:string,
     currMsg:number,
-    currResp:string
+    currResp:MsgInterface
     currState:StateMain;
 }
 class Main extends React.Component<MainProps, MainState> {
@@ -26,15 +27,14 @@ class Main extends React.Component<MainProps, MainState> {
         list:[],
         change:Main.closeTab,
         currMsg:0,
-        currResp:"test",
+        currResp:{msg:"kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk"},
         currState: StateMain.response
     }
     list:string[] = []
-    private createMsg(msg:string){
-        this.list = [...this.list, msg]
+    private createMsg(msg:string, resp?:string){
+        this.state.list = [...this.state.list, {msg,resp}]
         this.setState({
-            ...this.state,
-            list:this.list
+            ...this.state
         })
     }
     private closeChange(){
@@ -52,7 +52,7 @@ class Main extends React.Component<MainProps, MainState> {
     private deleteMensage(event:React.FormEvent<HTMLElement>){
         event.preventDefault();
         event.stopPropagation();
-        this.state.list[this.state.currMsg] = "";
+        this.state.list[this.state.currMsg] = {msg:""};
         this.setState({
             ...this.state,
             change:Main.closeTab
@@ -61,6 +61,7 @@ class Main extends React.Component<MainProps, MainState> {
     private respMsg(event:React.FormEvent<HTMLElement>){
         event.preventDefault();
         event.stopPropagation();
+        this.setResponse();
     }
     private setCurrentMsg(n:number){
         this.setState({
@@ -69,22 +70,39 @@ class Main extends React.Component<MainProps, MainState> {
             currMsg:n
         })
     }
-    readonly currPoss = [
+    private closeResponse(){
+        this.setState({
+            ...this.state,
+            currState:StateMain.default,
+        })
+    }
+    private getCurrMsg(){
+        return this.state.list[this.state.currMsg];
+    }
+    private setResponse(){
+        this.setState({
+            ...this.state,
+            currState:StateMain.response,
+            currResp:this.getCurrMsg(),
+            change: Main.closeTab
+        })
+    }
+    readonly currPoss = [(list:MsgInterface[],currResp:MsgInterface)=>
         <main className='main'>
-                    <ListMsg setCurrentMsg={this.setCurrentMsg.bind(this)} list={this.list}/>
-                    <Form createMsg={this.createMsg.bind(this)}/>
-        </main>,
+                    <ListMsg setCurrentMsg={this.setCurrentMsg.bind(this)} list={list}/>
+                    <Form closeTab={this.closeResponse.bind(this)} createMsg={this.createMsg.bind(this)}/>
+        </main>,(list:MsgInterface[],currResp:MsgInterface) =>
         <main className='main-reponse'>
-            <ListMsg setCurrentMsg={this.setCurrentMsg.bind(this)} list={this.list}/>
-            <Response  msg={this.state.currResp}/>
-            <Form createMsg={this.createMsg.bind(this)}/>
+            <ListMsg setCurrentMsg={this.setCurrentMsg.bind(this)} list={list}/>
+            <Response close={this.closeResponse.bind(this)} msg={currResp.msg}/>
+            <Form closeTab={this.closeResponse.bind(this)} respMsg={currResp.msg} createMsg={this.createMsg.bind(this)}/>
         </main>
     ]
     render() { 
         return ( 
             <>
             <div className='container'>
-                {this.currPoss[this.state.currState]}
+                {this.currPoss[this.state.currState](this.state.list, this.state.currResp)}
             </div>
             <nav className={this.state.change} onClick={this.closeChange.bind(this)}>
                 <ul className='change__ul'>
