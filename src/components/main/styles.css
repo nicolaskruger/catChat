@@ -1,7 +1,42 @@
-.main{
+.main,.main-reponse{
     background-color: var(--color-02);
     height: var(--main_heigth);
     display: grid;
     grid-template-columns: 100%;
+    
+}
+.main{
     grid-template-rows: 1fr 60px;
+}
+.main-reponse{
+    grid-template-rows: 1fr auto 60px;
+}
+.change{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 7, 12, 0.288);
+}
+.change__ul{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    font-size: 25px;
+}
+.change__li{
+    background-color: var(--color-07);
+    border: 5px solid var(--color-07);
+    cursor: pointer;
+}
+.change__li:hover{
+    background-color: var(--color-01);
+    border: 5px solid var(--color-01);
+}
+.inv{
+    display: none;
 }

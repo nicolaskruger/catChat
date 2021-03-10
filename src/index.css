@@ -5,6 +5,7 @@
   --color-04: whitesmoke;
   --color-05: rgb(4, 0, 7);
   --color-06: gray;
+  --color-07: rgb(50, 50, 94);
   --head_heigth: 60px;
   --main_heigth: calc(100vh - var(--head_heigth));
 }
