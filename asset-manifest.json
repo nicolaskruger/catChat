@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/cat_chat/static/css/main.8415d97b.chunk.css",
-    "main.js": "/cat_chat/static/js/main.74ef3c08.chunk.js",
-    "main.js.map": "/cat_chat/static/js/main.74ef3c08.chunk.js.map",
-    "runtime-main.js": "/cat_chat/static/js/runtime-main.bdc993e7.js",
-    "runtime-main.js.map": "/cat_chat/static/js/runtime-main.bdc993e7.js.map",
-    "static/js/2.1abd50de.chunk.js": "/cat_chat/static/js/2.1abd50de.chunk.js",
-    "static/js/2.1abd50de.chunk.js.map": "/cat_chat/static/js/2.1abd50de.chunk.js.map",
-    "index.html": "/cat_chat/index.html",
-    "static/css/main.8415d97b.chunk.css.map": "/cat_chat/static/css/main.8415d97b.chunk.css.map",
-    "static/js/2.1abd50de.chunk.js.LICENSE.txt": "/cat_chat/static/js/2.1abd50de.chunk.js.LICENSE.txt",
-    "static/media/block.262f7799.svg": "/cat_chat/static/media/block.262f7799.svg",
-    "static/media/cat_gray.a52bf8ce.png": "/cat_chat/static/media/cat_gray.a52bf8ce.png",
-    "static/media/close.e4e5d624.svg": "/cat_chat/static/media/close.e4e5d624.svg",
-    "static/media/down.85f8455f.svg": "/cat_chat/static/media/down.85f8455f.svg"
+    "main.css": "/catChat/static/css/main.8415d97b.chunk.css",
+    "main.js": "/catChat/static/js/main.74ef3c08.chunk.js",
+    "main.js.map": "/catChat/static/js/main.74ef3c08.chunk.js.map",
+    "runtime-main.js": "/catChat/static/js/runtime-main.d98e51af.js",
+    "runtime-main.js.map": "/catChat/static/js/runtime-main.d98e51af.js.map",
+    "static/js/2.1abd50de.chunk.js": "/catChat/static/js/2.1abd50de.chunk.js",
+    "static/js/2.1abd50de.chunk.js.map": "/catChat/static/js/2.1abd50de.chunk.js.map",
+    "index.html": "/catChat/index.html",
+    "static/css/main.8415d97b.chunk.css.map": "/catChat/static/css/main.8415d97b.chunk.css.map",
+    "static/js/2.1abd50de.chunk.js.LICENSE.txt": "/catChat/static/js/2.1abd50de.chunk.js.LICENSE.txt",
+    "static/media/block.262f7799.svg": "/catChat/static/media/block.262f7799.svg",
+    "static/media/cat_gray.a52bf8ce.png": "/catChat/static/media/cat_gray.a52bf8ce.png",
+    "static/media/close.e4e5d624.svg": "/catChat/static/media/close.e4e5d624.svg",
+    "static/media/down.85f8455f.svg": "/catChat/static/media/down.85f8455f.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.bdc993e7.js",
+    "static/js/runtime-main.d98e51af.js",
     "static/js/2.1abd50de.chunk.js",
     "static/css/main.8415d97b.chunk.css",
     "static/js/main.74ef3c08.chunk.js"
