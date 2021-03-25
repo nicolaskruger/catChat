@@ -1,6 +1,6 @@
 {
   "name": "lazy-cat",
-  "homepage": "http://nicolaskruger.github.io/cat_chat",
+  "homepage": "https://nicolaskruger.github.io/catChat",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
